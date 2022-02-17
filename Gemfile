@@ -40,3 +40,10 @@ group :development do
   gem 'web-console', '~> 2.0'
 end
 
+group :production do
+  gem 'pg', '~> 0.21' # for Heroku deployment
+  gem 'rails_12factor'
+end
+group :development, :test do
+  gem 'sqlite3', '~> 1.3.0'
+end
